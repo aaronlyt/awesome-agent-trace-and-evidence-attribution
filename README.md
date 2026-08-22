@@ -1,4 +1,4 @@
-# Awesome Agent Trace & Provenance
+# Awesome Agent Trace & Evidence Attribution
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![arXiv](https://img.shields.io/badge/arXiv-2606.04990-b31b1b.svg)](https://arxiv.org/abs/2606.04990)
