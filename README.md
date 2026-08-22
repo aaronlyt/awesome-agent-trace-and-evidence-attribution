@@ -30,7 +30,7 @@ This repository accompanies the survey:
 - [Error & Failure Taxonomies](#error--failure-taxonomies)
 - [Failure Attribution & Trace Debugging](#failure-attribution--trace-debugging)
   - [Multi-Agent Failure Attribution](#multi-agent-failure-attribution)
-  - [Single-Agent, Span- & Domain-Level Diagnosis](#single-agent-span--domain-level-diagnosis)
+  - [Single-Agent, Span-Level and Domain Diagnosis](#single-agent-span-level-and-domain-diagnosis)
   - [Trace-Driven Repair & Recovery](#trace-driven-repair--recovery)
 - [Runtime Provenance, Injection Defense & Guardrails](#runtime-provenance-injection-defense--guardrails)
   - [Indirect Prompt Injection & Tool Contamination](#indirect-prompt-injection--tool-contamination)
@@ -329,7 +329,7 @@ This list is organized along the pipeline above: **trace sources → trace repre
 
     *Mert Cemri, Melissa Z. Pan, Shuyi Yang, et al.*
 
-    [[Paper]](https://arxiv.org/abs/2503.13657) [[Code]](https://github.com/multi-agent-systems-failure-taxonomy/MAST) -- 14 failure modes in 3 categories over 150+ real MAS failures; annotator agreement shows failures are systematic, not random.
+    [[Paper]](https://arxiv.org/abs/2503.13657) [[Code]](https://github.com/multi-agent-systems-failure-taxonomy/MAST) -- 14 failure modes in 3 categories derived from 150 annotated traces (inter-annotator agreement κ = 0.88); failures are systematic, not random.
 
 52. **Where LLM Agents Fail and How They Can Learn From Failures (AgentDebug / AgentErrorTaxonomy)** (2025)
 
@@ -423,7 +423,7 @@ Given a failed trajectory, attribute responsibility — *who* (agent), *when* (s
 
     [[Paper]](https://arxiv.org/abs/2509.24088) -- Condensed error recognition with knowledge transfer; ships CORRECT-Error (2,000+ trajectories).
 
-71. **ERRORPROBE: Towards Self-Improving Error Diagnosis in Multi-Agent Systems** (2026)
+71. **Towards Self-Improving Error Diagnosis in Multi-Agent Systems (ERRORPROBE)** (2026)
 
     [[Paper]](https://arxiv.org/abs/2604.17658) -- Iterative, self-improving diagnosis loop.
 
@@ -431,7 +431,7 @@ Given a failed trajectory, attribute responsibility — *who* (agent), *when* (s
 
     [[Paper]](https://arxiv.org/abs/2512.06749) [[Website]](https://mbjinx.github.io/DoVer_Web/) -- Interventions on the execution to verify causal hypotheses about failures.
 
-73. **MP-Bench: Multi-Perspective Attribution for LLM Multi-Agent Systems** (2026)
+73. **Rethinking Failure Attribution in Multi-Agent Systems: A Multi-Perspective Benchmark and Evaluation (MP-Bench)** (2026)
 
     [[Paper]](https://arxiv.org/abs/2603.25001) -- Benchmark with failure-reason and ideal-action annotations.
 
@@ -439,15 +439,15 @@ Given a failed trajectory, attribute responsibility — *who* (agent), *when* (s
 
     [[Paper]](https://arxiv.org/abs/2510.07614) -- Message-level provenance and responsibility in role-specialized pipelines.
 
-### Single-Agent, Span- & Domain-Level Diagnosis
+### Single-Agent, Span-Level and Domain Diagnosis
 
 75. **TRAIL: Trace Reasoning and Agentic Issue Localization** (2025)
 
     *Darshan Deshpande, Varun Gangal, Hersh Mehta, et al.*
 
-    [[Paper]](https://arxiv.org/abs/2505.08638) [[Code]](https://github.com/patronus-ai/trail-benchmark) -- 148 annotated trajectories with 12 issue types across 6 capabilities; the reference dataset for step-level issue localization.
+    [[Paper]](https://arxiv.org/abs/2505.08638) [[Code]](https://github.com/patronus-ai/trail-benchmark) -- 148 human-annotated traces with 841 error annotations under a formal issue taxonomy; the best model localizes issues at only ~11% accuracy.
 
-76. **FALAT: Tracing Failures in LLM Agent Trajectories via Hierarchical Dependency-Guided Search** (2026)
+76. **FALAT: Tracing Failures in LLM Agent Trajectories via Dependency-Guided Search** (2026)
 
     [[Paper]](https://arxiv.org/abs/2606.00765) -- Reframes attribution as search over a hierarchical dependency structure instead of step classification.
 
@@ -491,7 +491,7 @@ Given a failed trajectory, attribute responsibility — *who* (agent), *when* (s
 
 ### Trace-Driven Repair & Recovery
 
-86. **HarnessFix: From Failed Trajectories to Reliable LLM Agents** (2026)
+86. **From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws (HarnessFix)** (2026)
 
     [[Paper]](https://arxiv.org/abs/2606.06324) -- Trace-grounded, diagnosis-driven repair of the *harness* (not the model) from failed trajectories.
 
@@ -531,13 +531,13 @@ Given a failed trajectory, attribute responsibility — *who* (agent), *when* (s
 
     *Edoardo Debenedetti, Jie Zhang, Mislav Balunović, et al.*
 
-    [[Paper]](https://arxiv.org/abs/2406.13352) [[Code]](https://github.com/eth-sri/agentdojo) -- Evaluate-attack-and-defend environment with utility-preserving defense metrics.
+    [[Paper]](https://arxiv.org/abs/2406.13352) [[Code]](https://github.com/ethz-spylab/agentdojo) -- Evaluate-attack-and-defend environment with utility-preserving defense metrics.
 
-93. **Identifying the Risks of LM Agents with an LM-Emulated Sandbox (ToolEmu)** (ICLR 2024)
+93. **Identifying the Risks of LM Agents with an LM-Emulated Sandbox (ToolEmu)** (ICLR 2024 Spotlight)
 
     *Yangjun Ruan, Honghua Dong, Andrew Wang, et al.*
 
-    [[Paper]](https://arxiv.org/abs/2309.15817) [[Code]](https://github.com/Stanford-CRFM/ToolEmu) -- Emulated risky-tool execution + risk categorization; the standard sandbox for unsafe-action studies.
+    [[Paper]](https://arxiv.org/abs/2309.15817) [[Code]](https://github.com/ryoungj/toolemu) -- Emulated risky-tool execution + risk categorization; the standard sandbox for unsafe-action studies.
 
 94. **OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety** (ICLR 2026)
 
@@ -589,7 +589,7 @@ Given a failed trajectory, attribute responsibility — *who* (agent), *when* (s
 
      [[Paper]](https://arxiv.org/abs/2603.22868) -- Builds an execution-provenance graph and blocks sensitive tool arguments derived from untrusted sources — parameter-level lineage beyond tool-level permissions.
 
-102. **TRACES: Proactive Safety Auditing for Multi-Turn LLM Agents** (2026)
+102. **TRACES: Proactive Safety Auditing for Multi-Turn LLM Agents via Trajectory-State Modeling** (2026)
 
      [[Paper]](https://arxiv.org/abs/2605.27690) -- Treats safety risk as an evolving trajectory state read from hidden representations.
 
@@ -601,7 +601,7 @@ Given a failed trajectory, attribute responsibility — *who* (agent), *when* (s
 
      [[Paper]](https://arxiv.org/abs/2503.18666) -- Declarative runtime constraints over actions, tool use, and environment state.
 
-104. **Securing AI Agent Execution (AgentBound)** (2025)
+104. **AgentBound: Securing Execution Boundaries of AI Agents** (2025)
 
      *Christoph Bühler, Matteo Biagiola, Luca Di Grazia, Guido Salvaneschi*
 
@@ -747,11 +747,11 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
      *Guanzhi Wang, Yuqi Xie, et al.*
 
-     [[Paper]](https://arxiv.org/abs/2305.16291) [[Code]](https://github.com/openai/voyager) -- Executable skill library grown from environment feedback — traces compiled into reusable code.
+     [[Paper]](https://arxiv.org/abs/2305.16291) [[Code]](https://github.com/MineDojo/Voyager) -- Executable skill library grown from environment feedback — traces compiled into reusable code.
 
 128. **ExpeL: LLM Agents Are Experiential Learners** (AAAI 2024)
 
-     *Zhiwei Zhao, Weizhi Wang, et al.*
+     *Andrew Zhao, Daniel Huang, et al.*
 
      [[Paper]](https://arxiv.org/abs/2308.10144) -- Distills cross-task insights (success/failure rules) from collected trajectories.
 
@@ -797,9 +797,9 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
 ### Process Rewards & Credit Assignment for Agents
 
-136. **AgentPRM: Process Reward Models for LLM Agents** (2025)
+136. **Process Reward Models for LLM Agents: Practical Framework and Directions (AgentPRM)** (2025)
 
-     *Yifan Song, et al.*
+     *Sanjiban Choudhury*
 
      [[Paper]](https://arxiv.org/abs/2502.10325) -- Actor-critic PRM with MC-rollout step-level reward targets; InversePRM handles sparse environment rewards.
 
@@ -807,11 +807,11 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
      [[Paper]](https://arxiv.org/abs/2511.08325) -- Redefines step reward as joint promise (goal reachability) + progress (goal proximity).
 
-138. **Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment (MT-GRPO)** (2025)
+138. **Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Reward Design (MT-GRPO)** (2025)
 
      [[Paper]](https://arxiv.org/abs/2505.11821) -- GRPO extended with turn-level relative advantages for multi-turn agent RL.
 
-139. **TRACE: Turn-Level Reward Assignment via Credit Estimation** (2026)
+139. **TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents** (2026)
 
      [[Paper]](https://arxiv.org/abs/2607.13988) -- Estimates per-turn credit for reward assignment in agent RL.
 
@@ -827,7 +827,7 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
 142. **Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents** (2024)
 
-     *Pritish Virupakshappa, et al.*
+     *Pranav Putta, Edmund Mills, et al.*
 
      [[Paper]](https://arxiv.org/abs/2408.07199) -- MCTS over web-agent trajectories + DPO self-critique.
 
@@ -843,9 +843,9 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
      [[Paper]](https://arxiv.org/abs/2310.03714) [[Code]](https://github.com/stanfordnlp/dspy) -- Optimize prompts/programs against outcome metrics — "programming, not prompting".
 
-145. **GEPA: Reflective Prompt Evolution with Language Reinforcement** (2025)
+145. **GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning** (2025)
 
-     *Mitesh P. Chaudhary, et al.*
+     *Lakshya A Agrawal, Shangyin Tan, et al.*
 
      [[Paper]](https://arxiv.org/abs/2507.19457) [[Code]](https://github.com/gepa-ai/gepa) -- Genetic-Pareto reflective prompt evolution using trajectory traces as candidates.
 
@@ -857,7 +857,7 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
      [[Paper]](https://arxiv.org/abs/2510.10035) -- Extracts causal experience from failures to refine multi-agent workflows.
 
-148. **AgentDiet: Improving Efficiency of LLM Agent Systems through Trajectory Reduction** (2025)
+148. **Reducing Cost of LLM Agents with Trajectory Reduction (AgentDiet)** (2025)
 
      [[Paper]](https://arxiv.org/abs/2509.23586) -- Prunes redundant trajectory content to cut cost while preserving performance.
 
@@ -919,7 +919,7 @@ The strongest objection to trace analysis: visible reasoning text may be a post-
 
 | Benchmark | Venue / Link | Scale | Annotation granularity |
 |---|---|---|---|
-| TRAIL | [arXiv:2505.08638](https://arxiv.org/abs/2505.08638) · [code](https://github.com/patronus-ai/trail-benchmark) | 148 trajectories | Step-level issues, 12 types, 6 capabilities |
+| TRAIL | [arXiv:2505.08638](https://arxiv.org/abs/2505.08638) · [code](https://github.com/patronus-ai/trail-benchmark) | 148 trajectories | Step-level issues; 841 error annotations |
 | Who&When | [ICML 2025](https://arxiv.org/abs/2505.00212) · [code](https://github.com/ag2ai/Agents_Failure_Attribution) | 127 trajectories | Responsible agent + step (tolerance ±k) |
 | AgentErrorBench | [arXiv:2509.25370](https://arxiv.org/abs/2509.25370) · [code](https://github.com/ulab-uiuc/AgentDebug) | 200 trajectories | 17 error types across 5 modules |
 | MAST corpus | [arXiv:2503.13657](https://arxiv.org/abs/2503.13657) · [code](https://github.com/multi-agent-systems-failure-taxonomy/MAST) | 150+ failures | 14 failure modes, 3 categories |
@@ -933,7 +933,7 @@ The strongest objection to trace analysis: visible reasoning text may be a post-
 | CORRECT-Error | [arXiv:2509.24088](https://arxiv.org/abs/2509.24088) | 2,000+ trajectories | Condensed error labels |
 | Failure lifecycle corpus | [arXiv:2509.23735](https://arxiv.org/abs/2509.23735) | 307 trajectories | Lifecycle stage + repair strategy |
 | AgentRx | [arXiv:2602.02475](https://arxiv.org/abs/2602.02475) | Trajectories | Unrecoverable-failure step |
-| ClawBench | [arXiv:2604.08523](https://arxiv.org/abs/2604.08523) · [code](https://github.com/TIGER-AI-Lab/ClawBench) | 283 web tasks | 5-layer traces (video/screenshot/HTTP/DOM/messages) |
+| ClawBench | [arXiv:2604.08523](https://arxiv.org/abs/2604.08523) · [code](https://github.com/TIGER-AI-Lab/ClawBench) | 283 web tasks | 5-layer traces (video/screenshots/HTTP/browser actions/messages) |
 | ALCE | [EMNLP 2023](https://arxiv.org/abs/2305.14627) | Citation tasks | Citation support labels |
 | RAGTruth | [ACL 2024](https://arxiv.org/abs/2401.00396) | RAG outputs | Word/span-level hallucination |
 | LOCOMO | [ACL 2024](https://arxiv.org/abs/2402.17753) | Long conversations | Long-term memory QA |
