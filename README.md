@@ -1,11 +1,11 @@
-# Awesome Agent Trace
+# Awesome Agent Trace & Provenance
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![arXiv](https://img.shields.io/badge/arXiv-2606.04990-b31b1b.svg)](https://arxiv.org/abs/2606.04990)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-**Agents are judged by their final answers — but trust lives in the trace.** Which evidence supported each claim? Where did a tool argument come from? Which step, agent, or memory item caused the failure? This list maps research that records, represents, attributes, enforces, debugs, and learns from **LLM-agent traces**.
+**Agents are judged by their final answers — but trust lives in the trace.** Which evidence supported each claim? Where did a tool argument come from? Which step, agent, or memory item caused the failure? This list maps research on **evidence tracing**, **execution provenance**, and **failure attribution** — methods, benchmarks, and tools that record, represent, attribute, enforce, debug, and learn from **LLM-agent traces**.
 
 **30+ taxonomies & attribution methods | 20+ safety & memory-provenance papers | 25+ benchmarks & datasets | 15+ observability tools & standards | Continuously updated**
 

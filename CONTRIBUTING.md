@@ -1,4 +1,4 @@
-# Contributing to Awesome Agent Trace
+# Contributing to Awesome Agent Trace & Provenance
 
 Thanks for helping build the map of agent-trace research! 🙌
 
