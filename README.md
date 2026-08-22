@@ -58,10 +58,19 @@ Two lenses organize the field:
 - **Evidence tracing** — the projection of that graph onto evidence-support relations: which evidence backs which claim, decision, or action.
 
 <p align="center">
-  <img src="assets/taxonomy.svg" width="92%" alt="Agent trace research map">
+  <img src="assets/provenance_framework.png" width="88%" alt="Evidence tracing and execution provenance framework overview">
 </p>
+<p align="center"><sub>Framework overview: a heterogeneous agent execution (reasoning, retrieval, tools, memory, environment, multi-agent) is recorded as a provenance layer of typed evidence/execution units and relations, which feeds downstream trust functions — verification, attribution, debugging, safety, audit, and recovery. (Figure from the <a href="https://arxiv.org/abs/2606.04990">companion survey</a>.)</sub></p>
 
-This list is organized along the pipeline above: **trace sources → trace representation → trace understanding (attribution, diagnosis, debugging) → trace-governed execution (safety, memory, learning) → trust functions (verification, audit, recovery)**.
+<p align="center">
+  <img src="assets/provenance_taxonomy.png" width="88%" alt="Agent provenance taxonomy: trace sources, units, relations, granularity and timing, trust functions">
+</p>
+<p align="center"><sub>The six-dimension taxonomy of agent provenance: trace sources, evidence and execution units, provenance relations, tracing granularity and timing, representation forms, and trust functions. (Figure from the <a href="https://arxiv.org/abs/2606.04990">companion survey</a>.)</sub></p>
+
+<p align="center">
+  <img src="assets/taxonomy.svg" width="96%" alt="How this list is organized: from trace sources to trust functions">
+</p>
+<p align="center"><sub>How this awesome list maps onto the pipeline: <b>trace sources → trace representation → trace understanding (attribution, diagnosis, debugging) → trace-governed execution (safety, memory, learning) → trust functions (verification, audit, recovery)</b>.</sub></p>
 
 ---
 
