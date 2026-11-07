@@ -790,15 +790,19 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
      [[Paper]](https://arxiv.org/abs/2601.11100) [[Code]](https://github.com/zz-haooo/ReCreate) -- Experience-driven creation of domain agents.
 
+134. **agent-qa** (2026)
+
+     [[Website]](https://vostride.com) [[Code]](https://github.com/vostride/agent-qa) [[Docs]](https://vostride.com/docs/agent-qa/self-improvement) -- Curates verified QA-step evidence into persistent app facts, cautions, and procedures in memidex; later runs retrieve these records and add confirming or contradicting outcomes, with inspectable provenance and reversible knowledge updates.
+
 ### Trajectory Distillation & Fine-Tuning
 
-134. **AgentTuning: Generalized Agent Abilities for LLMs via Agent-Trace Supervision** (2023)
+135. **AgentTuning: Generalized Agent Abilities for LLMs via Agent-Trace Supervision** (2023)
 
      *Aohan Zeng, et al.*
 
      [[Paper]](https://arxiv.org/abs/2310.12823) [[Code]](https://github.com/THUDM/AgentTuning) -- Curated agent trajectories as SFT signal that transfers to unseen tasks.
 
-135. **Agent-FLAN: Designing Data and Methods of Effective Agent Tuning** (2024)
+136. **Agent-FLAN: Designing Data and Methods of Effective Agent Tuning** (2024)
 
      *Zehan Wang, et al.*
 
@@ -806,85 +810,85 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
 ### Process Rewards & Credit Assignment for Agents
 
-136. **Process Reward Models for LLM Agents: Practical Framework and Directions (AgentPRM)** (2025)
+137. **Process Reward Models for LLM Agents: Practical Framework and Directions (AgentPRM)** (2025)
 
      *Sanjiban Choudhury*
 
      [[Paper]](https://arxiv.org/abs/2502.10325) -- Actor-critic PRM with MC-rollout step-level reward targets; InversePRM handles sparse environment rewards.
 
-137. **AgentPRM: Process Reward Models via Step-Wise Promise and Progress** (2025)
+138. **AgentPRM: Process Reward Models via Step-Wise Promise and Progress** (2025)
 
      [[Paper]](https://arxiv.org/abs/2511.08325) -- Redefines step reward as joint promise (goal reachability) + progress (goal proximity).
 
-138. **Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Reward Design (MT-GRPO)** (2025)
+139. **Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Reward Design (MT-GRPO)** (2025)
 
      [[Paper]](https://arxiv.org/abs/2505.11821) -- GRPO extended with turn-level relative advantages for multi-turn agent RL.
 
-139. **TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents** (2026)
+140. **TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents** (2026)
 
      [[Paper]](https://arxiv.org/abs/2607.13988) -- Estimates per-turn credit for reward assignment in agent RL.
 
-140. **Intrinsic Credit Assignment for Long Horizon Interaction (ΔBelief-RL)** (2026)
+141. **Intrinsic Credit Assignment for Long Horizon Interaction (ΔBelief-RL)** (2026)
 
      [[Paper]](https://arxiv.org/abs/2602.12342) -- Uses per-turn belief-change as dense intrinsic reward; critic-free turn-wise advantages.
 
-141. **WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum RL** (2024)
+142. **WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum RL** (2024)
 
      *Zehan Qi, et al.*
 
      [[Paper]](https://arxiv.org/abs/2411.02337) [[Code]](https://github.com/THUDM/WebRL) -- Self-evolving curricula from failure traces of underperforming tasks.
 
-142. **Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents** (2024)
+143. **Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents** (2024)
 
      *Pranav Putta, Edmund Mills, et al.*
 
      [[Paper]](https://arxiv.org/abs/2408.07199) -- MCTS over web-agent trajectories + DPO self-critique.
 
-143. **Agentic Reward Modeling: Verifying GUI Agents via Progressive Trajectory-Grounded Interaction** (2026)
+144. **Agentic Reward Modeling: Verifying GUI Agents via Progressive Trajectory-Grounded Interaction** (2026)
 
      [[Paper]](https://arxiv.org/abs/2602.00575) -- Reward modeling grounded in GUI interaction trajectories.
 
 ### Programmatic Trace Optimization
 
-144. **DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines** (2023)
+145. **DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines** (2023)
 
      *Omar Khattab, et al.*
 
      [[Paper]](https://arxiv.org/abs/2310.03714) [[Code]](https://github.com/stanfordnlp/dspy) -- Optimize prompts/programs against outcome metrics — "programming, not prompting".
 
-145. **GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning** (2025)
+146. **GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning** (2025)
 
      *Lakshya A Agrawal, Shangyin Tan, et al.*
 
      [[Paper]](https://arxiv.org/abs/2507.19457) [[Code]](https://github.com/gepa-ai/gepa) -- Genetic-Pareto reflective prompt evolution using trajectory traces as candidates.
 
-146. **Maestro: Joint Graph & Config Optimization for Reliable AI Agents** (2025)
+147. **Maestro: Joint Graph & Config Optimization for Reliable AI Agents** (2025)
 
      [[Paper]](https://arxiv.org/abs/2509.04642) -- Searches workflow graph + configuration jointly for reliability.
 
-147. **CE-Graph: Failure-Driven Workflow Refinement** (2025)
+148. **CE-Graph: Failure-Driven Workflow Refinement** (2025)
 
      [[Paper]](https://arxiv.org/abs/2510.10035) -- Extracts causal experience from failures to refine multi-agent workflows.
 
-148. **Reducing Cost of LLM Agents with Trajectory Reduction (AgentDiet)** (2025)
+149. **Reducing Cost of LLM Agents with Trajectory Reduction (AgentDiet)** (2025)
 
      [[Paper]](https://arxiv.org/abs/2509.23586) -- Prunes redundant trajectory content to cut cost while preserving performance.
 
 ### Classical Credit-Assignment Foundations
 
-149. **RUDDER: Return Decomposition for Delayed Rewards** (NeurIPS 2019)
+150. **RUDDER: Return Decomposition for Delayed Rewards** (NeurIPS 2019)
 
      *Jose A. Arjona-Medina, et al.*
 
      [[Paper]](https://arxiv.org/abs/1806.07857) -- Decomposes episodic return into per-step contributions.
 
-150. **Hindsight Credit Assignment** (NeurIPS 2019)
+151. **Hindsight Credit Assignment** (NeurIPS 2019)
 
      *Anna Harutyunyan, et al.*
 
      [[Paper]](https://arxiv.org/abs/1912.02503) -- Reweights past actions given the realized future.
 
-151. **A Survey of Temporal Credit Assignment in Deep Reinforcement Learning** (2023)
+152. **A Survey of Temporal Credit Assignment in Deep Reinforcement Learning** (2023)
 
      *Eduardo Pignatelli, et al.*
 
@@ -896,27 +900,27 @@ Memory is the persistent half of provenance: writes must carry lineage, retrieva
 
 The strongest objection to trace analysis: visible reasoning text may be a post-hoc narrative rather than the mechanism. Know the boundary conditions.
 
-152. **LLM Reasoning Is Latent, Not the Chain of Thought** (2026)
+153. **LLM Reasoning Is Latent, Not the Chain of Thought** (2026)
 
      [[Paper]](https://arxiv.org/abs/2604.15726) -- Position: answers are encoded in latent states before being spoken; CoT is a selective, sometimes unfaithful interface.
 
-153. **Chain-of-Thought Is Not Explainability** (2025)
+154. **Chain-of-Thought Is Not Explainability** (2025)
 
      *Fazl Barez, TY Wu, et al. (Oxford)*
 
      [[Paper]](https://fbarez.github.io/assets/pdf/Cot_Is_Not_Explainability.pdf) -- Position paper: CoT ≠ explanation, systematically reviewed.
 
-154. **Chain-of-Thought Reasoning in the Wild Is Not Always Faithful** (2025)
+155. **Chain-of-Thought Reasoning in the Wild Is Not Always Faithful** (2025)
 
      [[Paper]](https://arxiv.org/abs/2503.08679) -- Empirical faithfulness failures of naturally occurring CoT.
 
-155. **Large Language Models Cannot Self-Correct Reasoning Yet** (ICLR 2024)
+156. **Large Language Models Cannot Self-Correct Reasoning Yet** (ICLR 2024)
 
      *Jie Huang, et al.*
 
      [[Paper]](https://arxiv.org/abs/2310.01798) -- Without external feedback, self-correction degrades accuracy — models cannot *find* their reasoning errors.
 
-156. **Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge** (2024)
+157. **Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge** (2024)
 
      [[Paper]](https://arxiv.org/abs/2406.07791) -- Systematic judge biases; a strong reasoning model is not automatically a reliable trace annotator.
 
